@@ -96,7 +96,7 @@ function makeSmartPerson(name) {
 
 
 
-// ⭐️ Example Test Data ⭐️
+/* ⭐️ Example Test Data ⭐️
 
 var inventory = [
   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
@@ -113,8 +113,8 @@ var inventory = [
   { id: 12, car_make: "Lotus", car_model: "Esprit", car_year: 2004 },
   { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
-  /// ... Truncated
 ]
+*/
 
 /**
   * ### Example Array Challenge:
@@ -276,7 +276,7 @@ function getGermanCars(carArray) {
   return germanCars;
 }
 
-console.log(getGermanCars(inventory));
+
 
 /**
  * ### Challenge refactor to arrow functions
@@ -296,7 +296,6 @@ console.log(getGermanCars(inventory));
  *   return num * 2
  * }
 */
-
 const sum = (a, b) => {
   return a + b;
 }; 
@@ -308,6 +307,8 @@ const addFive = (num) => {
 const argTimesTwo = (num) => {
   return num * 2;
 }; 
+
+
 
 /**
  * ### Challenge `carMaker`
@@ -322,9 +323,16 @@ const argTimesTwo = (num) => {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(x) {
+  return {
+    odometer: x,
+    drive: function(distance){
+      return this.odometer += distance;
+    }
+  };
 }
+
+
 
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
